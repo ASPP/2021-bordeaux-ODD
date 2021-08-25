@@ -27,11 +27,13 @@ def stir(potion, direction):
     if direction == "clockwise":
         potion.colour = "vomit-yellow"
         print('NO!! Your potion turns vomit-yellow. Did you stir in the right direction?')
-        return
-    if direction == "anti-clockwise":
+    elif direction == "anti-clockwise":
         potion.colour = "newt-green"
         print('Your potion turns a lovely newt-green.')
-        return
+    else:
+        print("What are you doing to your potion??")
+        print("You need to stir, not distribute the contents on the floor!")
+    return
 
 
 def simmer(potion, duration):
@@ -153,5 +155,6 @@ def print_delay_dots(dur=1, number=2):
     for i in range(number):
         time.sleep(dur)
         print('.')
+    return
 
 

@@ -60,10 +60,6 @@ def make_example_potion(name):
     return my_potion
 
 
-def importing_check():
-    print("you could access this function in potion.py, yey, well done!")
-
-
 my_name = 'ASPP participant'
 my_potion = make_example_potion(my_name)
 # Let Snape inspect the potion
@@ -73,7 +69,9 @@ inspection_by_Snape(potion=my_potion, target_potion='example_potion')
 def make_python_expert_potion(name):
     print("I am a Python Expert")
     # todo: write this function!
-    pass
+    return
+
+    
 
 
 
