@@ -1,7 +1,7 @@
-from potion import Potion
-import containers
-import cooking
-import inspection
+from brewing.potion import Potion
+import brewing.containers
+import brewing.cooking
+import brewing.inspection
 
 
 def make_example_potion(name):
