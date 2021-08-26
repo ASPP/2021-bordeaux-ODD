@@ -11,7 +11,7 @@ with open('README.txt', 'r') as fh:
 
 # noinspection PyPackageRequirements
 setup(
-    name = 'potions',
+    name = 'brewing',
     version = '0.1.0',
     packages = find_packages(),
     author = 'ASPP 2021',
