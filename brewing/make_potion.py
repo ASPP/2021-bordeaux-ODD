@@ -1,12 +1,12 @@
-from potion import Potion
-import containers
-import cooking
-import inspection
+import brewing.potion
+import brewing.containers
+import brewing.cooking
+import brewing.inspection
 
 
 def make_example_potion(name):
 
-    my_potion = Potion(name=name)
+    my_potion = brewing.Potion(name=name)
     # Set up your old kettle and light an eternal flame underneath it.
     my_potion.setup(container=containers.old_kettle, heat_source=cooking.eternal_flame)
     # Simmer for 5 hours.
