@@ -78,14 +78,16 @@ def inspection_by_Snape(potion, target_potion='python_expert'):
     """
 
     print('-------------------------------')
+    if not potion:
+        print(f'"There is no potion I can inspect!"')
+        print(f'    (Tip: are you actually returning a proper potion and passing it to Snape?)')
+        return
+
     print(f'A sour looking Snape walks towards you to inspect your {target_potion} potion.')
     print(f'"What do we have here, {potion.name}...?"')
     print_delay_dots()
 
-    if not potion:
-        print(f'"There is no potion I can inspect, {potion.name}, Please set up your potion!"')
-        print(f'    (Tip: are you actually passing a proper potion to Snape?)')
-        return
+
 
     # set variables for each potion that need to be checked
     if target_potion == 'python_expert':
@@ -131,16 +133,20 @@ def inspection_by_Snape(potion, target_potion='python_expert'):
     if potion.cooked == expected_cooked and potion.simmer_duration == expected_simmer_duration:
         print(f'The potion is cooked properly, Snape cannot complain - he is looking annyoyed now.')
     else:
-        print(f'Snape smirks and remarks "Your potion is not properly cooked!" \n'
-              f'With a flick of his wand he vanishes the potion. \n'
+        if potion.simmer_duration < expected_simmer_duration:
+            print(f'Snape smirks and remarks "Your potion is undercooked!" \n')
+        elif potion.simmer_duration > expected_simmer_duration:
+            print(f'Snape smirks and remarks "Your potion is overcooked!" \n')
+        print(f'With a flick of his wand he vanishes the potion. \n'
               f'"I am taking 10 points from Hufflepuff, {potion.name}. Start again!"')
         return
 
     print_delay_dots()
 
     print(f'Snape mutters "You got away this time, {potion.name}!", since there is nothing wrong with '
-          f'your {target_potion} potion. \n \n'
-          f'You pack your bags and leave as fast as you can to have a butterbeer at the lake!')
+          f'your {target_potion} potion.')
+    print_delay_dots()
+    print(f'You pack your bags and leave as fast as you can to have a butterbeer at the lake!')
 
     return
 
@@ -151,10 +157,9 @@ eternal_flame = 'eternal_flame'
 breathe_on_cauldron = 'breathe_on_cauldron'
 
 
-def print_delay_dots(dur=1, number=2):
+
+def print_delay_dots(dur=0.5, number=2):
     for i in range(number):
         time.sleep(dur)
         print('.')
-    return
-
 
