@@ -1,4 +1,5 @@
-import brewing.potion
+
+from brewing.potion import Potion
 import brewing.containers
 import brewing.cooking
 import brewing.inspection
