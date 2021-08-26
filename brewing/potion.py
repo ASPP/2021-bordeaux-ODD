@@ -1,6 +1,3 @@
-from potion_stuff import *
-
-
 class Potion:
 
     def __init__(self, name):
@@ -48,28 +45,6 @@ class Potion:
             self.ingredients = ingredients
             self.colour = "transparent"
 
-
-def make_example_potion(name):
-
-    my_potion = Potion(name=name)
-    # Set up your old kettle and light an eternal flame underneath it.
-    my_potion.setup(container=old_kettle, heat_source=eternal_flame)
-    # Simmer for 5 hours.
-    simmer(my_potion, duration=5)
-
-    return my_potion
-
-
-my_name = 'ASPP participant'
-my_potion = make_example_potion(my_name)
-# Let Snape inspect the potion
-inspection_by_Snape(potion=my_potion, target_potion='example_potion')
-
-
-def make_python_expert_potion(name):
-    print("I am a Python Expert")
-    # todo: write this function!
-    return
 
     
 
