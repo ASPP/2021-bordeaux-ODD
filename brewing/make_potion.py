@@ -23,13 +23,13 @@ def make_python_expert_potion(name):
     my_potion.add_ingredients(ingredients=[ingr.fish_eyes,
 				ingr.unicorn_hair,ingr.tea_leaves])
     brewing.cooking.simmer(my_potion, duration=2)
-    return
+    return my_potion
 
 
 if __name__ == "__main__":
     my_name = 'AnnaLena and Burak'
     my_potion = make_python_expert_potion(my_name)
     # Let Snape inspect the potion
-    brewing.inspection.inspection_by_Snape(potion=my_potion, target_potion='expert_potion')
+    brewing.inspection.inspection_by_Snape(potion=my_potion, target_potion='python_expert')
 
 
